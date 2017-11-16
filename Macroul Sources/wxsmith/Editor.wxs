@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxDialog" name="Editor">
+		<title>Editor</title>
+		<size>800,600</size>
+		<id_arg>0</id_arg>
+		<style>wxDEFAULT_DIALOG_STYLE|wxRESIZE_BORDER|wxMAXIMIZE_BOX|wxMINIMIZE_BOX</style>
+		<handler function="OnClose" entry="EVT_CLOSE" />
+		<object class="wxFlexGridSizer" variable="FlexGridSizer1" member="no">
+			<cols>1</cols>
+			<rows>3</rows>
+			<growablecols>0</growablecols>
+			<growablerows>0</growablerows>
+			<object class="sizeritem">
+				<object class="wxFlexGridSizer" variable="FlexGridSizer4" member="no">
+					<cols>3</cols>
+					<growablecols>0</growablecols>
+					<growablerows>0</growablerows>
+					<object class="sizeritem">
+						<object class="wxListView" name="ID_LISTVIEW1" variable="m_List" member="yes">
+							<style>wxLC_REPORT|wxLC_SINGLE_SEL|wxLC_HRULES|wxLC_VRULES|wxVSCROLL</style>
+							<handler function="Onm_ListItemActivated" entry="EVT_LIST_ITEM_ACTIVATED" />
+							<handler function="Onm_ListKeyDown" entry="EVT_LIST_KEY_DOWN" />
+						</object>
+						<flag>wxALL|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxSpinButton" name="ID_SPINBUTTON1" variable="m_ButtonSpin" member="yes">
+							<max>1</max>
+							<handler function="Onm_ButtonSpinChange" entry="EVT_SPIN" />
+						</object>
+						<flag>wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="spacer">
+						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+				</object>
+				<flag>wxTOP|wxBOTTOM|wxEXPAND|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxFlexGridSizer" variable="FlexGridSizer2" member="no">
+					<cols>13</cols>
+					<rows>2</rows>
+					<object class="sizeritem">
+						<object class="wxBitmapButton" name="ID_BITMAPBUTTON2" variable="m_ButtonClick" member="yes">
+							<bitmap>res\click.bmp</bitmap>
+							<default>1</default>
+							<size>22,22</size>
+							<tooltip>Click cursor</tooltip>
+							<help>Click cursor</help>
+							<handler function="Onm_ButtonClickClick" entry="EVT_BUTTON" />
+						</object>
+						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxBitmapButton" name="ID_BITMAPBUTTON1" variable="m_ButtonMove" member="yes">
+							<bitmap>res\move.bmp</bitmap>
+							<default>1</default>
+							<size>22,22</size>
+							<tooltip>Muta cursor</tooltip>
+							<help>Muta cursor</help>
+							<handler function="Onm_ButtonMoveClick" entry="EVT_BUTTON" />
+						</object>
+						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxBitmapButton" name="ID_BITMAPBUTTON3" variable="m_ButtonSleep" member="yes">
+							<bitmap>res\sleep.bmp</bitmap>
+							<default>1</default>
+							<size>22,22</size>
+							<tooltip>Asteapta (milisecunde)</tooltip>
+							<help>Asteapta (milisecunde)</help>
+							<handler function="Onm_ButtonSleepClick" entry="EVT_BUTTON" />
+						</object>
+						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxBitmapButton" name="ID_BITMAPBUTTON4" variable="m_ButtonKey" member="yes">
+							<bitmap>res\key.bmp</bitmap>
+							<default>1</default>
+							<size>22,22</size>
+							<tooltip>Taste</tooltip>
+							<help>Taste</help>
+							<handler function="Onm_ButtonKeyClick" entry="EVT_BUTTON" />
+						</object>
+						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxBitmapButton" name="ID_BITMAPBUTTON5" variable="m_ButtonExecute" member="yes">
+							<bitmap>res\execute.bmp</bitmap>
+							<default>1</default>
+							<size>22,22</size>
+							<tooltip>Executa</tooltip>
+							<help>Executa</help>
+							<handler function="Onm_ButtonExecuteClick" entry="EVT_BUTTON" />
+						</object>
+						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxBitmapButton" name="ID_BITMAPBUTTON6" variable="m_ButtonWeb" member="yes">
+							<bitmap>res\website.bmp</bitmap>
+							<default>1</default>
+							<size>22,22</size>
+							<tooltip>Website</tooltip>
+							<help>Website</help>
+							<handler function="Onm_ButtonWebClick" entry="EVT_BUTTON" />
+						</object>
+						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxBitmapButton" name="ID_BITMAPBUTTON7" variable="m_ButtonEmail" member="yes">
+							<bitmap>res\email.bmp</bitmap>
+							<default>1</default>
+							<size>22,22</size>
+							<tooltip>Email</tooltip>
+							<help>Email</help>
+							<handler function="Onm_ButtonEmailClick" entry="EVT_BUTTON" />
+						</object>
+						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxBitmapButton" name="ID_BITMAPBUTTON8" variable="m_ButtonPower" member="yes">
+							<bitmap>res\shutdown.bmp</bitmap>
+							<default>1</default>
+							<size>22,22</size>
+							<tooltip>Power</tooltip>
+							<help>Power</help>
+							<handler function="Onm_ButtonPowerClick" entry="EVT_BUTTON" />
+						</object>
+						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxBitmapButton" name="ID_BITMAPBUTTON9" variable="m_ButtonSSH" member="yes">
+							<bitmap>res\ssh.bmp</bitmap>
+							<default>1</default>
+							<size>22,22</size>
+							<tooltip>SSH</tooltip>
+							<help>SSH</help>
+							<handler function="Onm_ButtonSSHClick" entry="EVT_BUTTON" />
+						</object>
+						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxBitmapButton" name="ID_BITMAPBUTTON10" variable="m_ButtonClose" member="yes">
+							<bitmap>res\close.bmp</bitmap>
+							<default>1</default>
+							<size>22,22</size>
+							<tooltip>Inchide</tooltip>
+							<help>Inchide</help>
+							<handler function="Onm_ButtonCloseClick" entry="EVT_BUTTON" />
+						</object>
+						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxBitmapButton" name="ID_BITMAPBUTTON11" variable="m_ButtonResize" member="yes">
+							<bitmap>res\resize.bmp</bitmap>
+							<default>1</default>
+							<size>22,22</size>
+							<tooltip>Redimensionare</tooltip>
+							<help>Redimensionare</help>
+							<handler function="Onm_ButtonResizeClick" entry="EVT_BUTTON" />
+						</object>
+						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxBitmapButton" name="ID_BITMAPBUTTON12" variable="m_ButtonAsteapta" member="yes">
+							<bitmap>res\waiting.bmp</bitmap>
+							<default>1</default>
+							<size>22,22</size>
+							<tooltip>Asteapta schimbare</tooltip>
+							<help>Asteapta schimbare</help>
+							<handler function="Onm_ButtonAsteaptaClick" entry="EVT_BUTTON" />
+						</object>
+						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxBitmapButton" name="ID_BITMAPBUTTON13" variable="m_ButtonMacrou" member="yes">
+							<bitmap>res\macrou.bmp</bitmap>
+							<default>1</default>
+							<size>22,22</size>
+							<tooltip>Macou</tooltip>
+							<help>Macou</help>
+							<handler function="Onm_ButtonMacrouClick" entry="EVT_BUTTON" />
+						</object>
+						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxStaticText" name="ID_STATICTEXT1" variable="StaticText1" member="yes">
+							<label>C</label>
+						</object>
+						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxStaticText" name="ID_STATICTEXT3" variable="StaticText3" member="yes">
+							<label>M</label>
+						</object>
+						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxStaticText" name="ID_STATICTEXT2" variable="StaticText2" member="yes">
+							<label>S</label>
+						</object>
+						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxStaticText" name="ID_STATICTEXT4" variable="StaticText4" member="yes">
+							<label>K</label>
+						</object>
+						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxStaticText" name="ID_STATICTEXT5" variable="StaticText5" member="yes">
+							<label>E</label>
+						</object>
+						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxStaticText" name="ID_STATICTEXT6" variable="StaticText6" member="yes">
+							<label>W</label>
+						</object>
+						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxStaticText" name="ID_STATICTEXT7" variable="StaticText7" member="yes">
+							<label>@</label>
+						</object>
+						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxStaticText" name="ID_STATICTEXT8" variable="StaticText8" member="yes">
+							<label>P</label>
+						</object>
+						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxStaticText" name="ID_STATICTEXT9" variable="StaticText9" member="yes">
+							<label>H</label>
+						</object>
+						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxStaticText" name="ID_STATICTEXT10" variable="StaticText10" member="yes">
+							<label>X</label>
+						</object>
+						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxStaticText" name="ID_STATICTEXT11" variable="StaticText11" member="yes">
+							<label>R</label>
+						</object>
+						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxStaticText" name="ID_STATICTEXT12" variable="StaticText12" member="yes">
+							<label>A</label>
+						</object>
+						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxStaticText" name="ID_STATICTEXT13" variable="StaticText13" member="yes">
+							<label>Q</label>
+						</object>
+						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+				</object>
+				<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxFlexGridSizer" variable="FlexGridSizer3" member="no">
+					<cols>7</cols>
+					<object class="sizeritem">
+						<object class="wxButton" name="ID_BUTTON1" variable="m_ButtonSave" member="yes">
+							<label>Salveaza</label>
+							<handler function="Onm_ButtonSaveClick" entry="EVT_BUTTON" />
+						</object>
+						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxButton" name="ID_BUTTON2" variable="m_ButtonEditeaza" member="yes">
+							<label>Editeaza</label>
+							<handler function="Onm_ButtonEditeazaClick" entry="EVT_BUTTON" />
+						</object>
+						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxButton" name="ID_BUTTON5" variable="m_ButtonSterge" member="yes">
+							<label>Sterge</label>
+							<handler function="Onm_ButtonStergeClick" entry="EVT_BUTTON" />
+						</object>
+						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxButton" name="ID_BUTTON3" variable="m_ButtonComentariu" member="yes">
+							<label>Comentariu</label>
+							<handler function="Onm_ButtonComentariuClick" entry="EVT_BUTTON" />
+						</object>
+						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxButton" name="ID_BUTTON4" variable="m_ButtonTest" member="yes">
+							<label>Test</label>
+							<handler function="Onm_ButtonTestClick" entry="EVT_BUTTON" />
+						</object>
+						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxButton" name="ID_BUTTON6" variable="m_ButtonImport" member="yes">
+							<label>Import</label>
+							<handler function="Onm_ButtonImportClick" entry="EVT_BUTTON" />
+						</object>
+						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+					<object class="sizeritem">
+						<object class="wxButton" name="ID_BUTTON7" variable="m_ButtonExport" member="yes">
+							<label>Export</label>
+							<handler function="Onm_ButtonExportClick" entry="EVT_BUTTON" />
+						</object>
+						<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						<border>5</border>
+						<option>1</option>
+					</object>
+				</object>
+				<flag>wxALL|wxALIGN_LEFT|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+		</object>
+		<object class="wxFileDialog" variable="m_SaveFile" member="yes">
+			<message>Selecteaza fisier</message>
+			<wildcard>Macrou Files (*.Macrou) | *.Macrou</wildcard>
+			<style>wxFD_SAVE</style>
+		</object>
+		<object class="wxFileDialog" variable="m_OpenFile" member="yes">
+			<message>Selecteaza fisier</message>
+			<wildcard>Macrou Files (*.Macrou) | *.Macrou</wildcard>
+			<style>wxFD_OPEN</style>
+		</object>
+	</object>
+</wxsmith>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxFrame" name="MacroulFrame">
+		<title>Macroul</title>
+		<icon>res/macrou.ico</icon>
+		<bg>#022028</bg>
+		<style>wxDEFAULT_DIALOG_STYLE|wxMINIMIZE_BOX</style>
+		<handler function="OnClose" entry="EVT_CLOSE" />
+		<object class="wxFlexGridSizer" variable="FlexGridSizer1" member="no">
+			<cols>1</cols>
+			<object class="sizeritem">
+				<object class="wxBitmapButton" name="ID_BITMAPBUTTON3" variable="m_EditMacro" member="yes">
+					<bitmap>res\3.bmp</bitmap>
+					<size>200,75</size>
+					<handler function="Onm_EditMacroClick" entry="EVT_BUTTON" />
+				</object>
+				<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxBitmapButton" name="ID_BITMAPBUTTON1" variable="m_MyMacros" member="yes">
+					<bitmap>res/1.bmp</bitmap>
+					<size>200,75</size>
+					<handler function="Onm_MyMacrosClick" entry="EVT_BUTTON" />
+				</object>
+				<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxBitmapButton" name="ID_BITMAPBUTTON2" variable="m_Search" member="yes">
+					<bitmap>res\2.bmp</bitmap>
+					<size>200,75</size>
+					<handler function="Onm_SearchClick" entry="EVT_BUTTON" />
+				</object>
+				<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxBitmapButton" name="ID_BITMAPBUTTON6" variable="m_ButtonCalculatoareGrupuri" member="yes">
+					<bitmap>res\CGM.bmp</bitmap>
+					<size>200,75</size>
+					<handler function="Onm_ButtonCalculatoareGrupuriClick" entry="EVT_BUTTON" />
+				</object>
+				<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxBitmapButton" name="ID_BITMAPBUTTON7" variable="m_ButtonNLP" member="yes">
+					<bitmap>res/NLP.bmp</bitmap>
+					<size>200,75</size>
+					<handler function="Onm_ButtonNLPClick" entry="EVT_BUTTON" />
+				</object>
+				<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxBitmapButton" name="ID_BITMAPBUTTON4" variable="m_ButtonSettings" member="yes">
+					<bitmap>res\4.bmp</bitmap>
+					<size>200,75</size>
+					<handler function="Onm_ButtonSettingsClick" entry="EVT_BUTTON" />
+				</object>
+				<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+			<object class="sizeritem">
+				<object class="wxBitmapButton" name="ID_BITMAPBUTTON5" variable="m_Exit" member="yes">
+					<bitmap>res\5.bmp</bitmap>
+					<size>200,75</size>
+					<handler function="Onm_ExitClick" entry="EVT_BUTTON" />
+				</object>
+				<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+				<border>5</border>
+				<option>1</option>
+			</object>
+		</object>
+	</object>
+</wxsmith>

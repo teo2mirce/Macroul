@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Macroul" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Macroul" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-D__WXDEBUG__" />
+					<Add directory="../../wxWidgets-3.0.0/lib/gcc_dll/mswu" />
+				</Compiler>
+				<Linker>
+					<Add library="libwxmsw30u.a" />
+					<Add directory="../../wxWidgets-3.0.0/lib/gcc_dll" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Macroul" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-std=c++11" />
+					<Add directory="../../wxWidgets-3.0.0/lib/gcc_dll/mswu" />
+				</Compiler>
+				<ResourceCompiler>
+					<Add directory="../../wxWidgets-3.0.0/lib/gcc_dll/mswu" />
+				</ResourceCompiler>
+				<Linker>
+					<Add option="-s" />
+					<Add library="libwxmsw30u.a" />
+					<Add directory="../../wxWidgets-3.0.0/lib/gcc_dll" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-O3" />
+			<Add option="-std=c++11" />
+			<Add option="-Wall" />
+			<Add option="-pipe" />
+			<Add option="-mthreads" />
+			<Add option="-D__GNUWIN32__" />
+			<Add option="-D__WXMSW__" />
+			<Add option="-DWXUSINGDLL" />
+			<Add option="-DwxUSE_UNICODE" />
+			<Add directory="../../wxWidgets-3.0.0/include" />
+			<Add directory="../mysql" />
+		</Compiler>
+		<ResourceCompiler>
+			<Add directory="../../wxWidgets-3.0.0/include" />
+		</ResourceCompiler>
+		<Linker>
+			<Add option="-mthreads" />
+			<Add library="mysqlpp" />
+			<Add library="wininet" />
+			<Add directory="../../wxWidgets-3.0.0/lib" />
+			<Add directory="../mysql" />
+		</Linker>
+		<Unit filename="CRSonMicro.cpp" />
+		<Unit filename="CRSonMicro.h" />
+		<Unit filename="Database.cpp" />
+		<Unit filename="Database.h" />
+		<Unit filename="DialogActivator.cpp" />
+		<Unit filename="DialogActivator.h" />
+		<Unit filename="DialogCalculatoare.cpp" />
+		<Unit filename="DialogCalculatoare.h" />
+		<Unit filename="DialogCalculatoareAddEdit.cpp" />
+		<Unit filename="DialogCalculatoareAddEdit.h" />
+		<Unit filename="DialogCalculatoareGrupuriMeniuri.cpp" />
+		<Unit filename="DialogCalculatoareGrupuriMeniuri.h" />
+		<Unit filename="DialogEditDesc.cpp" />
+		<Unit filename="DialogEditDesc.h" />
+		<Unit filename="DialogEditorAsteapta.cpp" />
+		<Unit filename="DialogEditorAsteapta.h" />
+		<Unit filename="DialogEditorClick.cpp" />
+		<Unit filename="DialogEditorClick.h" />
+		<Unit filename="DialogEditorClose.cpp" />
+		<Unit filename="DialogEditorClose.h" />
+		<Unit filename="DialogEditorComentariu.cpp" />
+		<Unit filename="DialogEditorComentariu.h" />
+		<Unit filename="DialogEditorEmail.cpp" />
+		<Unit filename="DialogEditorEmail.h" />
+		<Unit filename="DialogEditorKey.cpp" />
+		<Unit filename="DialogEditorKey.h" />
+		<Unit filename="DialogEditorMove.cpp" />
+		<Unit filename="DialogEditorMove.h" />
+		<Unit filename="DialogEditorPower.cpp" />
+		<Unit filename="DialogEditorPower.h" />
+		<Unit filename="DialogEditorResize.cpp" />
+		<Unit filename="DialogEditorResize.h" />
+		<Unit filename="DialogEditorSSH.cpp" />
+		<Unit filename="DialogEditorSSH.h" />
+		<Unit filename="DialogEditorSleep.cpp" />
+		<Unit filename="DialogEditorSleep.h" />
+		<Unit filename="DialogEditorWebsite.cpp" />
+		<Unit filename="DialogEditorWebsite.h" />
+		<Unit filename="DialogEditoroExecute.cpp" />
+		<Unit filename="DialogEditoroExecute.h" />
+		<Unit filename="DialogGetCode.cpp" />
+		<Unit filename="DialogGetCode.h" />
+		<Unit filename="DialogGetText.cpp" />
+		<Unit filename="DialogGetText.h" />
+		<Unit filename="DialogGrupuri.cpp" />
+		<Unit filename="DialogGrupuri.h" />
+		<Unit filename="DialogGrupuriAddEdit.cpp" />
+		<Unit filename="DialogGrupuriAddEdit.h" />
+		<Unit filename="DialogLimbajNatural.cpp" />
+		<Unit filename="DialogLimbajNatural.h" />
+		<Unit filename="DialogLogin.cpp" />
+		<Unit filename="DialogLogin.h" />
+		<Unit filename="DialogMacroCauta.cpp" />
+		<Unit filename="DialogMacroCauta.h" />
+		<Unit filename="DialogMacroEditor.cpp" />
+		<Unit filename="DialogMacroEditor.h" />
+		<Unit filename="DialogMacroMele.cpp" />
+		<Unit filename="DialogMacroMele.h" />
+		<Unit filename="DialogMacrouSablon.cpp" />
+		<Unit filename="DialogMacrouSablon.h" />
+		<Unit filename="DialogMeniuri.cpp" />
+		<Unit filename="DialogMeniuri.h" />
+		<Unit filename="DialogMeniuriAddEdit.cpp" />
+		<Unit filename="DialogMeniuriAddEdit.h" />
+		<Unit filename="DialogNLP.cpp" />
+		<Unit filename="DialogNLP.h" />
+		<Unit filename="DialogNLPEditor.cpp" />
+		<Unit filename="DialogNLPEditor.h" />
+		<Unit filename="DialogParolaNoua.cpp" />
+		<Unit filename="DialogParolaNoua.h" />
+		<Unit filename="DialogSablonCauta.cpp" />
+		<Unit filename="DialogSablonCauta.h" />
+		<Unit filename="DialogSettings.cpp" />
+		<Unit filename="DialogSettings.h" />
+		<Unit filename="DialogVariabila.cpp" />
+		<Unit filename="DialogVariabila.h" />
+		<Unit filename="DialogViewMacro.cpp" />
+		<Unit filename="DialogViewMacro.h" />
+		<Unit filename="Editor.cpp" />
+		<Unit filename="Editor.h" />
+		<Unit filename="MacroulApp.cpp" />
+		<Unit filename="MacroulApp.h" />
+		<Unit filename="MacroulMain.cpp" />
+		<Unit filename="MacroulMain.h" />
+		<Unit filename="Misc.cpp" />
+		<Unit filename="Misc.h" />
+		<Unit filename="huk.h" />
+		<Unit filename="huk2.h" />
+		<Unit filename="resource.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="wxsmith/DialogActivator.wxs" />
+		<Unit filename="wxsmith/DialogCalculatoare.wxs" />
+		<Unit filename="wxsmith/DialogCalculatoareAddEdit.wxs" />
+		<Unit filename="wxsmith/DialogCalculatoareGrupuriMeniuri.wxs" />
+		<Unit filename="wxsmith/DialogEditDesc.wxs" />
+		<Unit filename="wxsmith/DialogEditorAsteapta.wxs" />
+		<Unit filename="wxsmith/DialogEditorClick.wxs" />
+		<Unit filename="wxsmith/DialogEditorClose.wxs" />
+		<Unit filename="wxsmith/DialogEditorComentariu.wxs" />
+		<Unit filename="wxsmith/DialogEditorEmail.wxs" />
+		<Unit filename="wxsmith/DialogEditorKey.wxs" />
+		<Unit filename="wxsmith/DialogEditorMove.wxs" />
+		<Unit filename="wxsmith/DialogEditorPower.wxs" />
+		<Unit filename="wxsmith/DialogEditorResize.wxs" />
+		<Unit filename="wxsmith/DialogEditorSSH.wxs" />
+		<Unit filename="wxsmith/DialogEditorSleep.wxs" />
+		<Unit filename="wxsmith/DialogEditorWebsite.wxs" />
+		<Unit filename="wxsmith/DialogEditoroExecute.wxs" />
+		<Unit filename="wxsmith/DialogGetCode.wxs" />
+		<Unit filename="wxsmith/DialogGetText.wxs" />
+		<Unit filename="wxsmith/DialogGrupuri.wxs" />
+		<Unit filename="wxsmith/DialogGrupuriAddEdit.wxs" />
+		<Unit filename="wxsmith/DialogLimbajNatural.wxs" />
+		<Unit filename="wxsmith/DialogLogin.wxs" />
+		<Unit filename="wxsmith/DialogMacroCauta.wxs" />
+		<Unit filename="wxsmith/DialogMacroEditor.wxs" />
+		<Unit filename="wxsmith/DialogMacroMele.wxs" />
+		<Unit filename="wxsmith/DialogMacrouSablon.wxs" />
+		<Unit filename="wxsmith/DialogMeniuri.wxs" />
+		<Unit filename="wxsmith/DialogMeniuriAddEdit.wxs" />
+		<Unit filename="wxsmith/DialogNLP.wxs" />
+		<Unit filename="wxsmith/DialogNLPEditor.wxs" />
+		<Unit filename="wxsmith/DialogParolaNoua.wxs" />
+		<Unit filename="wxsmith/DialogSablonCauta.wxs" />
+		<Unit filename="wxsmith/DialogSettings.wxs" />
+		<Unit filename="wxsmith/DialogVariabila.wxs" />
+		<Unit filename="wxsmith/DialogViewMacro.wxs" />
+		<Unit filename="wxsmith/Editor.wxs" />
+		<Unit filename="wxsmith/GetCode.wxs" />
+		<Unit filename="wxsmith/Login.wxs" />
+		<Unit filename="wxsmith/Macroulframe.wxs" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+			<wxsmith version="1">
+				<gui name="wxWidgets" src="MacroulApp.cpp" main="MacroulFrame" init_handlers="necessary" language="CPP" />
+				<resources>
+					<wxFrame wxs="wxsmith/Macroulframe.wxs" src="MacroulMain.cpp" hdr="MacroulMain.h" fwddecl="0" i18n="1" name="MacroulFrame" language="CPP" />
+					<wxDialog wxs="wxsmith/Editor.wxs" src="Editor.cpp" hdr="Editor.h" fwddecl="0" i18n="1" name="Editor" language="CPP" />
+					<wxDialog wxs="wxsmith/DialogEditorClick.wxs" src="DialogEditorClick.cpp" hdr="DialogEditorClick.h" fwddecl="0" i18n="1" name="DialogEditorClick" language="CPP" />
+					<wxDialog wxs="wxsmith/DialogEditorMove.wxs" src="DialogEditorMove.cpp" hdr="DialogEditorMove.h" fwddecl="0" i18n="1" name="DialogEditorMove" language="CPP" />
+					<wxDialog wxs="wxsmith/DialogEditorSleep.wxs" src="DialogEditorSleep.cpp" hdr="DialogEditorSleep.h" fwddecl="0" i18n="1" name="DialogEditorSleep" language="CPP" />
+					<wxDialog wxs="wxsmith/DialogEditorKey.wxs" src="DialogEditorKey.cpp" hdr="DialogEditorKey.h" fwddecl="0" i18n="1" name="DialogEditorKey" language="CPP" />
+					<wxDialog wxs="wxsmith/DialogEditorComentariu.wxs" src="DialogEditorComentariu.cpp" hdr="DialogEditorComentariu.h" fwddecl="0" i18n="1" name="DialogEditorComentariu" language="CPP" />
+					<wxDialog wxs="wxsmith/DialogEditoroExecute.wxs" src="DialogEditoroExecute.cpp" hdr="DialogEditoroExecute.h" fwddecl="0" i18n="1" name="DialogEditoroExecute" language="CPP" />
+					<wxDialog wxs="wxsmith/DialogEditorWebsite.wxs" src="DialogEditorWebsite.cpp" hdr="DialogEditorWebsite.h" fwddecl="0" i18n="1" name="DialogEditorWebsite" language="CPP" />
+					<wxDialog wxs="wxsmith/DialogEditorEmail.wxs" src="DialogEditorEmail.cpp" hdr="DialogEditorEmail.h" fwddecl="0" i18n="1" name="DialogEditorEmail" language="CPP" />
+					<wxDialog wxs="wxsmith/DialogEditorPower.wxs" src="DialogEditorPower.cpp" hdr="DialogEditorPower.h" fwddecl="0" i18n="1" name="DialogEditorPower" language="CPP" />
+					<wxDialog wxs="wxsmith/DialogEditorSSH.wxs" src="DialogEditorSSH.cpp" hdr="DialogEditorSSH.h" fwddecl="0" i18n="1" name="DialogEditorSSH" language="CPP" />
+					<wxDialog wxs="wxsmith/DialogEditorClose.wxs" src="DialogEditorClose.cpp" hdr="DialogEditorClose.h" fwddecl="0" i18n="1" name="DialogEditorClose" language="CPP" />
+					<wxDialog wxs="wxsmith/DialogEditorResize.wxs" src="DialogEditorResize.cpp" hdr="DialogEditorResize.h" fwddecl="0" i18n="1" name="DialogEditorResize" language="CPP" />
+					<wxDialog wxs="wxsmith/DialogMacroEditor.wxs" src="DialogMacroEditor.cpp" hdr="DialogMacroEditor.h" fwddecl="0" i18n="1" name="DialogMacroEditor" language="CPP" />
+					<wxDialog wxs="wxsmith/DialogEditDesc.wxs" src="DialogEditDesc.cpp" hdr="DialogEditDesc.h" fwddecl="0" i18n="1" name="DialogEditDesc" language="CPP" />
+					<wxDialog wxs="wxsmith/DialogLogin.wxs" src="DialogLogin.cpp" hdr="DialogLogin.h" fwddecl="0" i18n="1" name="DialogLogin" language="CPP" />
+					<wxDialog wxs="wxsmith/DialogGetCode.wxs" src="DialogGetCode.cpp" hdr="DialogGetCode.h" fwddecl="0" i18n="1" name="DialogGetCode" language="CPP" />
+					<wxDialog wxs="wxsmith/DialogParolaNoua.wxs" src="DialogParolaNoua.cpp" hdr="DialogParolaNoua.h" fwddecl="0" i18n="1" name="DialogParolaNoua" language="CPP" />
+					<wxDialog wxs="wxsmith/DialogMacroMele.wxs" src="DialogMacroMele.cpp" hdr="DialogMacroMele.h" fwddecl="0" i18n="1" name="DialogMacroMele" language="CPP" />
+					<wxDialog wxs="wxsmith/DialogMacroCauta.wxs" src="DialogMacroCauta.cpp" hdr="DialogMacroCauta.h" fwddecl="0" i18n="1" name="DialogMacroCauta" language="CPP" />
+					<wxDialog wxs="wxsmith/DialogViewMacro.wxs" src="DialogViewMacro.cpp" hdr="DialogViewMacro.h" fwddecl="0" i18n="1" name="DialogViewMacro" language="CPP" />
+					<wxDialog wxs="wxsmith/DialogActivator.wxs" src="DialogActivator.cpp" hdr="DialogActivator.h" fwddecl="0" i18n="1" name="DialogActivator" language="CPP" />
+					<wxDialog wxs="wxsmith/DialogSettings.wxs" src="DialogSettings.cpp" hdr="DialogSettings.h" fwddecl="0" i18n="1" name="DialogSettings" language="CPP" />
+					<wxDialog wxs="wxsmith/DialogCalculatoareGrupuriMeniuri.wxs" src="DialogCalculatoareGrupuriMeniuri.cpp" hdr="DialogCalculatoareGrupuriMeniuri.h" fwddecl="0" i18n="1" name="DialogCalculatoareGrupuriMeniuri" language="CPP" />
+					<wxDialog wxs="wxsmith/DialogCalculatoare.wxs" src="DialogCalculatoare.cpp" hdr="DialogCalculatoare.h" fwddecl="0" i18n="1" name="DialogCalculatoare" language="CPP" />
+					<wxDialog wxs="wxsmith/DialogCalculatoareAddEdit.wxs" src="DialogCalculatoareAddEdit.cpp" hdr="DialogCalculatoareAddEdit.h" fwddecl="0" i18n="1" name="DialogCalculatoareAddEdit" language="CPP" />
+					<wxDialog wxs="wxsmith/DialogGrupuri.wxs" src="DialogGrupuri.cpp" hdr="DialogGrupuri.h" fwddecl="0" i18n="1" name="DialogGrupuri" language="CPP" />
+					<wxDialog wxs="wxsmith/DialogGrupuriAddEdit.wxs" src="DialogGrupuriAddEdit.cpp" hdr="DialogGrupuriAddEdit.h" fwddecl="0" i18n="1" name="DialogGrupuriAddEdit" language="CPP" />
+					<wxDialog wxs="wxsmith/DialogMeniuri.wxs" src="DialogMeniuri.cpp" hdr="DialogMeniuri.h" fwddecl="0" i18n="1" name="DialogMeniuri" language="CPP" />
+					<wxDialog wxs="wxsmith/DialogMeniuriAddEdit.wxs" src="DialogMeniuriAddEdit.cpp" hdr="DialogMeniuriAddEdit.h" fwddecl="0" i18n="1" name="DialogMeniuriAddEdit" language="CPP" />
+					<wxDialog wxs="wxsmith/DialogEditorAsteapta.wxs" src="DialogEditorAsteapta.cpp" hdr="DialogEditorAsteapta.h" fwddecl="0" i18n="1" name="DialogEditorAsteapta" language="CPP" />
+					<wxDialog wxs="wxsmith/DialogLimbajNatural.wxs" src="DialogLimbajNatural.cpp" hdr="DialogLimbajNatural.h" fwddecl="0" i18n="1" name="DialogLimbajNatural" language="CPP" />
+					<wxDialog wxs="wxsmith/DialogNLPEditor.wxs" src="DialogNLPEditor.cpp" hdr="DialogNLPEditor.h" fwddecl="0" i18n="1" name="DialogNLPEditor" language="CPP" />
+					<wxDialog wxs="wxsmith/DialogNLP.wxs" src="DialogNLP.cpp" hdr="DialogNLP.h" fwddecl="0" i18n="1" name="DialogNLP" language="CPP" />
+					<wxDialog wxs="wxsmith/DialogVariabila.wxs" src="DialogVariabila.cpp" hdr="DialogVariabila.h" fwddecl="0" i18n="1" name="DialogVariabila" language="CPP" />
+					<wxDialog wxs="wxsmith/DialogGetText.wxs" src="DialogGetText.cpp" hdr="DialogGetText.h" fwddecl="0" i18n="1" name="DialogGetText" language="CPP" />
+					<wxDialog wxs="wxsmith/DialogMacrouSablon.wxs" src="DialogMacrouSablon.cpp" hdr="DialogMacrouSablon.h" fwddecl="0" i18n="1" name="DialogMacrouSablon" language="CPP" />
+					<wxDialog wxs="wxsmith/DialogSablonCauta.wxs" src="DialogSablonCauta.cpp" hdr="DialogSablonCauta.h" fwddecl="0" i18n="1" name="DialogSablonCauta" language="CPP" />
+				</resources>
+			</wxsmith>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
